@@ -1,7 +1,7 @@
 # Project Blueprint
 
 ## Overview
-This project is a static website for a cleaning company ("Eclat de Sud" based on the CNAME), built with **Astro.js** and **Tailwind CSS**. It is designed for performance and ease of deployment on GitHub Pages.
+This project is a static website for a cleaning company ("Éclat de Sud"), built with **Astro.js** and **Tailwind CSS**. It is designed for performance, accessibility, and high visual appeal, targeting local customers seeking premium cleaning services (Airbnb rotation, end-of-construction cleaning, residential, and event cleanup).
 
 ## Project Outline
 - **Framework**: Astro.js (v5)
@@ -10,13 +10,16 @@ This project is a static website for a cleaning company ("Eclat de Sud" based on
 - **Domain**: `eclatdesud.fr`
 
 ### Key Files & Directories
-- `src/pages/`: Contains the Astro components that act as pages.
-- `public/`: Static assets and the `CNAME` file for custom domain configuration.
-- `.github/workflows/deploy.yml`: CI/CD configuration for deploying to GitHub Pages.
-- `astro.config.mjs`: Astro configuration including the `site` URL and Tailwind integration.
+- `src/pages/`: Contains the Astro components that act as pages (Home, Mentions Légales, Contact, Services).
+- `src/components/`: Modular UI components (Navbar, Button, FAQ, ContactForm, Reviews, Footer).
+- `src/data/`: Structured JS data containing service details.
+- `src/assets/`: Media resources (images, SVGs).
+- `tailwind.config.mjs`: Tailwind design tokens.
+- `src/styles/global.css`: Global styles.
 
-## Current Plan: Troubleshoot HTTPS on GitHub Pages
-1.  **Verify Project Config**: Checked for `CNAME` in root and `public/`. (Completed: Found in both).
-2.  **Verify Astro Config**: Checked `site` property in `astro.config.mjs`. (Completed: `https://eclatdesud.fr`).
-3.  **Diagnosis**: The code configuration is correct. The missing HTTPS certificate is likely due to DNS propagation or GitHub Pages settings ("Enforce HTTPS").
-4.  **Action**: Inform the user to check GitHub Repository Settings and DNS records.
+## Current Plan: Add Google Analytics
+We will add Google Analytics tracking tags to the head section of the site's layout so that all pages are tracked.
+
+### Actionable Steps
+1. **Update Layout.astro**: Add the Google Analytics global site tag script block inside the `<head>` of `src/layouts/Layout.astro`.
+2. **Verify Integration**: Inspect the browser rendering to verify that the gtag script is successfully outputted and executed.

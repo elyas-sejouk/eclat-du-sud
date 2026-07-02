@@ -4,22 +4,20 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				'soapy-green': '#cae7ec', // Your Pistachio Green
-				'soapy-orange': '#F1B844', // Your Retro Orange
-				'soapy-yellow': '#F1B844',
-				'soapy-black': '#000000',  // Pure black
+				'brand-navy': '#0b1a30',
+				'brand-navy-light': '#162d4a',
+				'brand-blue': '#1a365d',
+				'brand-gold': '#b89047',
+				'brand-gold-light': '#c9a25b',
+				'brand-gray-light': '#f8fafc',
+				'brand-gray-border': '#e2e8f0',
+				'brand-text': '#1e293b',
+				'brand-text-muted': '#64748b',
 			},
 			fontFamily: {
-				sans: ["Montserrat", "sans-serif"],
-				retro: ['"EB Garamond"', "serif"], // Formerly Shrikhand. Keeps class name for backward compatibility.
+				sans: ["Inter", "sans-serif"],
+				heading: ["Outfit", "sans-serif"],
 			},
-			boxShadow: {
-				'retro': '4px 4px 0px 0px #000000', // Hard "Cartoon" shadow
-				'retro-hover': '2px 2px 0px 0px #000000', // The effect when clicking
-			},
-			borderWidth: {
-				'3': '3px', // Specific thickness for the Soapy style
-			}
 		},
 	},
 	plugins: [],

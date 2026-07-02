@@ -7,7 +7,7 @@ const questions = [
   },
   {
     q: "Êtes-vous assurés en cas de casse ?",
-    a: "Oui, nous disposons d'une assurance professionnelle complète (RC Pro). Si un vase Ming tombe, il est couvert (mais nos équipes sont très prudentes !).",
+    a: "Oui, nous disposons d'une assurance professionnelle complète (RC Pro). Si un incident survient, il est couvert par notre police d'assurance (bien que nos équipes soient extrêmement vigilantes !).",
   },
   {
     q: "Quelles zones géographiques couvrez-vous ?",
@@ -15,30 +15,30 @@ const questions = [
   },
   {
     q: "Faites-vous le nettoyage des vitres ?",
-    a: "Oui, les vitres accessibles sont incluses dans les forfaits Fin de Chantier. Pour les vitres en hauteur ou d'accès difficile, précisez-le dans le devis.",
+    a: "Oui, les vitres accessibles sont incluses dans les forfaits Fin de Chantier. Pour les vitres en hauteur, de verrières ou d'accès difficile, précisez-le dans le devis pour que nous adaptions nos équipements.",
   },
 ];
 ---
 
-<section class="bg-soapy-green border-b-3 border-soapy-black py-20">
+<section class="bg-white py-24 border-b border-brand-gray-border/60">
   <div class="container mx-auto px-6 max-w-3xl">
-    <h2 class="font-retro font-bold text-4xl text-center mb-12">
+    <h2 class="font-heading font-bold text-3xl text-center text-brand-navy mb-12">
       Questions Fréquentes
     </h2>
 
     <div class="space-y-4">
       {
         questions.map((item) => (
-          <details class="group bg-white border-3 border-soapy-black rounded-xl overflow-hidden cursor-pointer shadow-retro hover:translate-y-[-2px] transition-all duration-200">
-            <summary class="flex justify-between items-center p-6 font-bold text-lg list-none select-none">
+          <details class="group bg-white border border-brand-gray-border rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-all duration-300">
+            <summary class="flex justify-between items-center p-6 font-semibold text-lg text-brand-navy hover:text-brand-gold list-none select-none transition-colors">
               <span>{item.q}</span>
-              <span class="transform group-open:rotate-180 transition-transform duration-300 text-2xl group-open:text-soapy-yellow">
-                ▼
-              </span>
+              <svg class="w-5 h-5 text-brand-gold transition-transform duration-300 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
             </summary>
 
-            <div class="p-8 text-gray-700 leading-relaxed border-t-3 border-soapy-black bg-gray-50">
-              <p>{item.a}</p>
+            <div class="p-6 pt-0 text-brand-text-muted leading-relaxed border-t border-brand-gray-border/40 bg-brand-gray-light/20">
+              <p class="text-base">{item.a}</p>
             </div>
           </details>
         ))

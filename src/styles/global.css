@@ -2,16 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .border-3 {
-    border-width: 3px;
+@layer base {
+  body {
+    @apply bg-brand-gray-light text-brand-text font-sans antialiased;
   }
-  
-  .shadow-retro {
-    box-shadow: 4px 4px 0px 0px #000000;
-  }
-  
-  .shadow-retro-hover {
-    box-shadow: 2px 2px 0px 0px #000000;
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-brand-navy font-semibold;
   }
 }

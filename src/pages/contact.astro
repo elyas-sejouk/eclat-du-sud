@@ -5,86 +5,108 @@ import Footer from '../components/Footer.astro';
 import ContactForm from '../components/ContactForm.astro';
 ---
 
-<Layout title="Contact & Devis - Éclat de Sud">
+<Layout title="Contact & Devis">
   <Navbar />
 
-  <main>
+  <main class="bg-brand-gray-light min-h-screen">
     
-    <section class="bg-soapy-green border-b-3 border-soapy-black py-16 text-center">
-      <div class="container mx-auto px-6">
-        <h1 class="font-retro text-5xl md:text-6xl mb-4">On papote ? 📞</h1>
-        <p class="text-xl font-bold max-w-2xl mx-auto">
-          Une urgence chantier ? Un Airbnb à préparer ? Ou juste envie de dire bonjour ?
-          <br>L'équipe Éclat de Sud intervient dans l'Hérault, l'Aude et les PO.
+    {/* Page Header */}
+    <section class="bg-brand-navy text-white py-20 text-center relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(184,144,71,0.06),transparent_50%)] pointer-events-none"></div>
+      <div class="container mx-auto px-6 relative z-10">
+        <h1 class="font-heading font-extrabold text-4xl md:text-5xl mb-4">Contactez-nous</h1>
+        <p class="text-slate-300 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
+          Une urgence chantier ? Un Airbnb à préparer ? L'équipe Éclat de Sud intervient rapidement dans l'Hérault, l'Aude et les Pyrénées-Orientales.
         </p>
       </div>
     </section>
 
-    <section class="container mx-auto px-6 py-16">
-      <div class="grid lg:grid-cols-2 gap-12 items-start">
+    <section class="container mx-auto px-6 py-20">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
         
         <div class="space-y-8">
           
-          <div class="bg-white border-3 border-soapy-black p-8 rounded-2xl shadow-retro">
-            <h2 class="font-retro text-3xl mb-6 underline decoration-wavy decoration-soapy-orange">Nos Coordonnées</h2>
+          {/* Contact Details Card */}
+          <div class="bg-white border border-brand-gray-border/60 p-8 rounded-2xl shadow-sm">
+            <h2 class="font-heading font-bold text-2xl text-brand-navy mb-8 border-b border-brand-gray-border pb-4">
+              Nos Coordonnées
+            </h2>
             
-            <div class="space-y-6 text-lg">
+            <div class="space-y-8 text-base">
               
+              {/* Phone Group */}
               <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-soapy-orange rounded-full border-3 border-soapy-black flex items-center justify-center text-2xl shrink-0">
-                  📞
+                <div class="w-10 h-10 bg-brand-gold/10 text-brand-gold rounded-full flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
                 </div>
                 <div>
-                  <p class="text-sm font-bold uppercase text-gray-500 mb-1">Par téléphone (Urgence 7j/7)</p>
-                  <div class="flex flex-col gap-1">
-                    <a href="tel:+33758424636" class="font-retro text-2xl hover:text-soapy-orange transition-colors">07 58 42 46 36</a>
-                    <a href="tel:+33751168503" class="font-retro text-2xl hover:text-soapy-orange transition-colors">07 51 16 85 03</a>
+                  <p class="text-xs font-bold uppercase tracking-wider text-brand-text-muted mb-1">Par téléphone (Urgence 7j/7)</p>
+                  <div class="flex flex-col gap-1.5">
+                    <a href="tel:+33758424636" class="font-heading font-bold text-xl text-brand-navy hover:text-brand-gold transition-colors">07 58 42 46 36</a>
+                    <a href="tel:+33751168503" class="font-heading font-bold text-xl text-brand-navy hover:text-brand-gold transition-colors">07 51 16 85 03</a>
                   </div>
                 </div>
               </div>
 
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-soapy-green rounded-full border-3 border-soapy-black flex items-center justify-center text-2xl shrink-0">
-                  💌
+              {/* Email Group */}
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-brand-gold/10 text-brand-gold rounded-full flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
                 </div>
                 <div>
-                  <p class="text-sm font-bold uppercase text-gray-500">Par email</p>
-                  <a href="mailto:eclatdesud@gmail.com" class="font-bold text-xl hover:text-soapy-orange transition-colors break-all">eclatdesud@gmail.com</a>
+                  <p class="text-xs font-bold uppercase tracking-wider text-brand-text-muted mb-1">Par email</p>
+                  <a href="mailto:eclatdesud@gmail.com" class="font-bold text-lg text-brand-navy hover:text-brand-gold transition-colors break-all">eclatdesud@gmail.com</a>
                 </div>
               </div>
 
-              <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-white rounded-full border-3 border-soapy-black flex items-center justify-center text-2xl shrink-0">
-                  📍
+              {/* Address Group */}
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-brand-gold/10 text-brand-gold rounded-full flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                 </div>
                 <div>
-                  <p class="text-sm font-bold uppercase text-gray-500">Siège Social</p>
-                  <p class="font-bold text-xl">1 Rue Général Chanzy<br>34500 Béziers</p>
+                  <p class="text-xs font-bold uppercase tracking-wider text-brand-text-muted mb-1">Siège Social</p>
+                  <p class="font-bold text-lg text-brand-navy">1 Rue Général Chanzy<br>34500 Béziers</p>
                 </div>
               </div>
 
             </div>
           </div>
 
-          <div class="bg-soapy-black text-soapy-green border-3 border-soapy-green p-8 rounded-2xl shadow-retro rotate-1">
-            <h3 class="font-retro text-2xl mb-4 text-white">🕐 Horaires d'ouverture</h3>
-            <ul class="space-y-4 font-bold font-mono text-lg">
-              <li class="flex justify-between items-center border-b border-gray-700 pb-2">
+          {/* Horaires Card */}
+          <div class="bg-brand-navy text-white p-8 rounded-2xl shadow-sm border border-brand-navy-light relative overflow-hidden">
+            <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-brand-gold/5 rounded-full blur-2xl"></div>
+            <h3 class="font-heading font-bold text-xl text-white mb-6 flex items-center gap-2">
+              <svg class="w-5 h-5 text-brand-gold" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Horaires d'ouverture
+            </h3>
+            <ul class="space-y-4 text-base font-semibold text-slate-300">
+              <li class="flex justify-between items-center border-b border-brand-navy-light pb-3">
                 <span>Lundi - Dimanche</span>
-                <span class="text-white bg-soapy-orange text-soapy-black px-2 py-1 rounded transform -rotate-2">7j/7</span>
+                <span class="text-brand-navy bg-brand-gold px-3 py-1 rounded-full font-bold text-xs uppercase tracking-wider">7j/7</span>
               </li>
-              <li class="flex justify-between items-center pt-2">
-                <span>Créneau</span>
-                <span class="text-white text-xl">08h00 - 23h00</span>
+              <li class="flex justify-between items-center pt-1">
+                <span>Créneaux d'intervention</span>
+                <span class="text-white text-lg">08h00 - 23h00</span>
               </li>
             </ul>
           </div>
 
-          <div class="bg-white border-3 border-soapy-black p-6 rounded-2xl shadow-retro text-center">
-            <p class="font-bold mb-4">Suivez nos chantiers (Avant/Après) 📸</p>
+          {/* Instagram Social Follow Card */}
+          <div class="bg-white border border-brand-gray-border/60 p-8 rounded-2xl shadow-sm text-center">
+            <p class="text-brand-text font-bold mb-4">Découvrez nos interventions et chantiers</p>
             <div class="flex justify-center">
-              <a href="https://www.instagram.com/eclat.desud/" target="_blank" class="flex items-center gap-2 bg-soapy-yellow text-soapy-black px-6 py-3 rounded-full border-3 border-soapy-black hover:scale-105 transition-transform font-bold">
-                <span>Instagram</span>  
+              <a href="https://www.instagram.com/eclat.desud/" target="_blank" class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navy-light text-white px-8 py-3 rounded-full font-bold tracking-wide transition-all shadow-sm">
+                <span>Nous suivre sur Instagram</span>  
               </a>
             </div>
           </div>
@@ -98,7 +120,8 @@ import ContactForm from '../components/ContactForm.astro';
       </div>
     </section>
 
-    <section class="border-y-3 border-soapy-black h-96 w-full relative bg-gray-200">
+    {/* Map Section */}
+    <section class="border-y border-brand-gray-border h-96 w-full relative bg-slate-100">
         <iframe 
             src="https://www.google.com/maps?q=1+Rue+Général+Chanzy+34500+Béziers&output=embed" 
             width="100%" 
@@ -107,16 +130,17 @@ import ContactForm from '../components/ContactForm.astro';
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"
-            class="grayscale hover:grayscale-0 transition-all duration-500"
+            class="grayscale contrast-125 opacity-90"
+            title="Carte d'intervention Béziers"
         ></iframe>
         
-        <div class="absolute top-10 left-10 bg-white border-3 border-soapy-black p-4 rounded-xl shadow-retro hidden md:block max-w-xs">
-            <p class="font-bold text-lg mb-1">Zone d'intervention 🚗</p>
-            <p class="text-sm font-medium">Nous nous déplaçons dans toute la région :</p>
-            <div class="flex gap-2 mt-2 font-bold text-soapy-orange">
-                <span class="bg-soapy-black px-2 py-1 rounded">11 Aude</span>
-                <span class="bg-soapy-black px-2 py-1 rounded">34 Hérault</span>
-                <span class="bg-soapy-black px-2 py-1 rounded">66 PO</span>
+        <div class="absolute top-10 left-10 bg-white border border-brand-gray-border/80 p-6 rounded-xl shadow-lg hidden md:block max-w-sm relative z-10">
+            <p class="font-heading font-bold text-lg text-brand-navy mb-2">Zone d'intervention</p>
+            <p class="text-brand-text-muted text-sm font-medium mb-4">Notre équipe se déplace sur l'ensemble des départements suivants :</p>
+            <div class="flex gap-2 font-bold text-xs uppercase tracking-wider">
+                <span class="bg-brand-navy text-white px-2.5 py-1 rounded">11 Aude</span>
+                <span class="bg-brand-navy text-white px-2.5 py-1 rounded">34 Hérault</span>
+                <span class="bg-brand-navy text-white px-2.5 py-1 rounded">66 PO</span>
             </div>
         </div>
     </section>
