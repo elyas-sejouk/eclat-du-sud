@@ -53,7 +53,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 				<div class="absolute -inset-4 bg-brand-gold/5 rounded-full blur-3xl -z-10"></div>
 				<Image
 					src={logoImg}
-					alt="Logo Éclat de Sud"
+					alt="Logo Éclat du Sud"
 					width={280}
 					densities={[1.5, 2]}
 					loading="eager"
@@ -87,7 +87,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 										{images[`/src/assets/services/${service.imageFile}`] ? (
 											<Image
 												src={images[`/src/assets/services/${service.imageFile}`]()}
-												alt={`${service.title} - Éclat de Sud Narbonne`}
+												alt={`${service.title} - Éclat du Sud Narbonne`}
 												width={600}
 												class="w-full h-52 object-cover border-b border-brand-gray-border group-hover:scale-105 transition-transform duration-700"
 											/>

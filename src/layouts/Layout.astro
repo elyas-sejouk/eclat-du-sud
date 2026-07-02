@@ -15,7 +15,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const defaultSiteTitle = "Éclat de Sud";
+const defaultSiteTitle = "Éclat du Sud";
 const displayTitle = title ? `${title} | ${defaultSiteTitle}` : defaultSiteTitle;
 ---
 
@@ -30,6 +30,16 @@ const displayTitle = title ? `${title} | ${defaultSiteTitle}` : defaultSiteTitle
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/ico.png" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DVLQKWGKSB"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-DVLQKWGKSB');
+		</script>
 
 		<title>{displayTitle}</title>
 	</head>

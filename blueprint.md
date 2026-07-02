@@ -1,7 +1,7 @@
 # Project Blueprint
 
 ## Overview
-This project is a static website for a cleaning company ("Éclat de Sud"), built with **Astro.js** and **Tailwind CSS**. It is designed for performance, accessibility, and high visual appeal, targeting local customers seeking premium cleaning services (Airbnb rotation, end-of-construction cleaning, residential, and event cleanup).
+This project is a static website for a cleaning company ("Éclat du Sud"), built with **Astro.js** and **Tailwind CSS**. It is designed for performance, accessibility, and high visual appeal, targeting local customers seeking premium cleaning services (Airbnb rotation, end-of-construction cleaning, residential, and event cleanup).
 
 ## Project Outline
 - **Framework**: Astro.js (v5)
@@ -17,9 +17,10 @@ This project is a static website for a cleaning company ("Éclat de Sud"), built
 - `tailwind.config.mjs`: Tailwind design tokens.
 - `src/styles/global.css`: Global styles.
 
-## Current Plan: Add Google Analytics
-We will add Google Analytics tracking tags to the head section of the site's layout so that all pages are tracked.
+## Current Plan: Rename Brand to "Éclat du Sud" & Add Google Analytics
+We will update all site references from "Éclat de Sud" to "Éclat du Sud" (and social/domain handles depending on confirmation) and add Google Analytics to the head section of the site's layout.
 
 ### Actionable Steps
-1. **Update Layout.astro**: Add the Google Analytics global site tag script block inside the `<head>` of `src/layouts/Layout.astro`.
-2. **Verify Integration**: Inspect the browser rendering to verify that the gtag script is successfully outputted and executed.
+1. **Update layout, components, and pages**: Replace brand text "Éclat de Sud" and "ÉCLAT DE SUD" with "Éclat du Sud" and "ÉCLAT DU SUD".
+2. **Add Google Analytics**: Insert the analytics tags into `Layout.astro`.
+3. **Verify Integration**: Inspect the browser rendering to verify changes.

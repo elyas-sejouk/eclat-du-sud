@@ -1,12 +1,12 @@
-# Éclat de Sud Context
+# Éclat du Sud Context
 
-This context represents the static website and quotation platform for "Éclat de Sud", a professional cleaning service operating in the French Arc Méditerranéen.
+This context represents the static website and quotation platform for "Éclat du Sud", a professional cleaning service operating in the French Arc Méditerranéen.
 
 ## Language
 
-**Éclat de Sud**:
+**Éclat du Sud**:
 The official brand and business name representing the cleaning service.
-_Avoid_: Eclat du Sud, Eclat de Sud (without accent), Nettoyage Sud
+_Avoid_: Éclat de Sud, Eclat du Sud (without accent), Nettoyage Sud
 
 **Client**:
 The business (e.g., Airbnb host, property manager, construction site supervisor) or individual requesting cleaning services.
