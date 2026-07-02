@@ -3,7 +3,7 @@ import Button from "./Button.astro";
 ---
 
 <header class="bg-white/90 backdrop-blur-md border-b border-brand-gray-border/80 sticky top-0 z-50 transition-all duration-300">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center relative">
     <a
       href="/"
       class="font-heading font-bold text-xl md:text-2xl tracking-tight text-brand-navy hover:opacity-90 transition-opacity"
@@ -11,6 +11,7 @@ import Button from "./Button.astro";
       ÉCLAT DU SUD<span class="text-brand-gold">.</span>
     </a>
 
+    <!-- Desktop Navigation -->
     <nav class="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase text-brand-navy/90">
       <a
         href="/#services"
@@ -34,74 +35,213 @@ import Button from "./Button.astro";
       />
     </nav>
 
-    <button id="menu-btn" class="md:hidden z-50 focus:outline-none text-brand-navy" aria-label="Toggle Menu">
-      <div class="w-6 h-6 flex flex-col justify-center gap-1.5 cursor-pointer">
+    <!-- Mobile Hamburger Button -->
+    <button
+      id="menu-btn"
+      class="md:hidden z-50 relative focus:outline-none text-brand-navy group p-1"
+      aria-label="Toggle Menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <div class="w-6 h-5 flex flex-col justify-between cursor-pointer relative">
         <span
-          id="line1"
-          class="block w-full h-0.5 bg-brand-navy rounded-full transition-all duration-300"
+          class="menu-line block w-full h-0.5 bg-brand-navy rounded-full transition-all duration-300 origin-center"
         ></span>
         <span
-          id="line2"
-          class="block w-full h-0.5 bg-brand-navy rounded-full transition-all duration-300"
+          class="menu-line block w-full h-0.5 bg-brand-navy rounded-full transition-all duration-300"
         ></span>
         <span
-          id="line3"
-          class="block w-full h-0.5 bg-brand-navy rounded-full transition-all duration-300"
+          class="menu-line block w-full h-0.5 bg-brand-navy rounded-full transition-all duration-300 origin-center"
         ></span>
       </div>
     </button>
+  </div>
+</header>
 
-    <div
-      id="mobile-menu"
-      class="fixed inset-0 bg-white/98 flex flex-col justify-center items-center gap-8 text-2xl font-heading text-brand-navy translate-x-full transition-transform duration-300 ease-in-out md:hidden z-40"
-    >
-      <a href="/#services" class="mobile-link hover:text-brand-gold transition-colors">Prestations</a>
-      <a href="/#devis" class="mobile-link hover:text-brand-gold transition-colors">Demander un Devis</a>
-      <a href="/contact" class="mobile-link hover:text-brand-gold transition-colors">Contact</a>
-      <div class="mt-8">
-        <Button
-          text="07 58 42 46 36"
+<!-- Mobile Backdrop Overlay (placed outside header to escape backdrop-filter containing block context) -->
+<div
+  id="menu-backdrop"
+  class="fixed inset-0 bg-brand-navy/60 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none md:hidden"
+></div>
+
+<!-- Mobile Drawer Menu (placed outside header to escape backdrop-filter containing block context) -->
+<div
+  id="mobile-menu"
+  class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-brand-navy text-white z-[60] shadow-2xl translate-x-full transition-transform duration-300 ease-out md:hidden flex flex-col"
+  tabindex="-1"
+>
+  <!-- Dedicated Close Button inside drawer -->
+  <button
+    id="drawer-close-btn"
+    class="absolute top-5 right-6 text-white/80 hover:text-brand-gold transition-colors focus:outline-none p-1"
+    aria-label="Fermer le menu"
+  >
+    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  </button>
+
+  <!-- Scrollable content area -->
+  <div class="flex-1 overflow-y-auto px-8 pt-24 pb-8 flex flex-col justify-between min-h-0">
+    <div>
+      <!-- Logo & Brand Subtitle -->
+      <div class="mb-10">
+        <div class="font-heading font-bold text-xl tracking-tight text-white mb-1">
+          ÉCLAT DU SUD<span class="text-brand-gold">.</span>
+        </div>
+        <p class="text-xs tracking-wider uppercase text-brand-gold font-semibold font-heading">
+          Prestige & Propreté
+        </p>
+      </div>
+
+      <!-- Drawer Navigation Links -->
+      <nav class="flex flex-col gap-5 text-lg font-semibold tracking-wide uppercase font-heading">
+        <a
+          href="/#services"
+          class="mobile-link text-white/90 hover:text-brand-gold transition-colors py-3 border-b border-white/5 flex items-center justify-between"
+        >
+          Prestations
+          <svg class="w-4 h-4 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a
+          href="/#devis"
+          class="mobile-link text-white/90 hover:text-brand-gold transition-colors py-3 border-b border-white/5 flex items-center justify-between"
+        >
+          Demander un Devis
+          <svg class="w-4 h-4 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a
+          href="/contact"
+          class="mobile-link text-white/90 hover:text-brand-gold transition-colors py-3 border-b border-white/5 flex items-center justify-between"
+        >
+          Contact
+          <svg class="w-4 h-4 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Footer / Contact Info inside Drawer -->
+    <div class="pt-10 border-t border-white/10 space-y-6 mt-8">
+      <div>
+        <span class="block text-[10px] tracking-widest text-white/40 font-bold uppercase mb-2">CONTACT & DEVIS</span>
+        <a
           href="tel:+330758424636"
-          variant="primary"
-        />
+          class="block w-full py-3 px-6 rounded-full bg-brand-gold text-white hover:bg-brand-gold-light transition-all duration-300 font-bold text-base tracking-wide text-center shadow-md hover:shadow-lg hover:-translate-y-0.5"
+        >
+          Appeler : 07 58 42 46 36
+        </a>
+      </div>
+
+      <div class="space-y-1 text-sm text-white/60">
+        <p class="font-medium text-white/80 font-heading text-xs tracking-wider uppercase">Secteurs d'intervention :</p>
+        <p class="text-xs">Narbonne, Béziers, Montpellier & environs</p>
+      </div>
+
+      <div class="text-[11px] text-white/40">
+        <p>Disponible du Lundi au Samedi : 8h00 - 19h00</p>
       </div>
     </div>
   </div>
-</header>
+</div>
+
+<style>
+  /* CSS-based Hamburger animation */
+  #menu-btn[aria-expanded="true"] .menu-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  #menu-btn[aria-expanded="true"] .menu-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  #menu-btn[aria-expanded="true"] .menu-line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+</style>
 
 <script>
   const btn = document.getElementById("menu-btn");
   const menu = document.getElementById("mobile-menu");
-  const line1 = document.getElementById("line1");
-  const line2 = document.getElementById("line2");
-  const line3 = document.getElementById("line3");
+  const backdrop = document.getElementById("menu-backdrop");
+  const closeBtn = document.getElementById("drawer-close-btn");
   const links = document.querySelectorAll(".mobile-link");
 
-  btn?.addEventListener("click", () => {
-    menu?.classList.toggle("translate-x-full");
-    const isOpen = !menu?.classList.contains("translate-x-full");
+  function openMenu() {
+    if (!btn || !menu || !backdrop) return;
+    
+    btn.setAttribute("aria-expanded", "true");
+    menu.classList.remove("translate-x-full");
+    backdrop.classList.remove("opacity-0", "pointer-events-none");
+    backdrop.classList.add("opacity-100", "pointer-events-auto");
+    document.body.classList.add("overflow-hidden");
 
-    if (line1 && line2 && line3) {
-      if (isOpen) {
-        line1.style.transform = "rotate(45deg) translateY(8px)";
-        line2.style.opacity = "0";
-        line3.style.transform = "rotate(-45deg) translateY(-8px)";
-      } else {
-        line1.style.transform = "none";
-        line2.style.opacity = "1";
-        line3.style.transform = "none";
-      }
+    // Move focus into the menu for A11Y
+    menu.focus();
+  }
+
+  function closeMenu() {
+    if (!btn || !menu || !backdrop) return;
+
+    btn.setAttribute("aria-expanded", "false");
+    menu.classList.add("translate-x-full");
+    backdrop.classList.remove("opacity-100", "pointer-events-auto");
+    backdrop.classList.add("opacity-0", "pointer-events-none");
+    document.body.classList.remove("overflow-hidden");
+
+    // Return focus to the button
+    btn.focus();
+  }
+
+  function toggleMenu() {
+    const isOpen = btn?.getAttribute("aria-expanded") === "true";
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  btn?.addEventListener("click", toggleMenu);
+  backdrop?.addEventListener("click", closeMenu);
+  closeBtn?.addEventListener("click", closeMenu);
+
+  // Close when clicking a link
+  links.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Close on Escape key press
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && btn?.getAttribute("aria-expanded") === "true") {
+      closeMenu();
     }
   });
 
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
-      menu?.classList.add("translate-x-full");
-      if (line1 && line2 && line3) {
-        line1.style.transform = "none";
-        line2.style.opacity = "1";
-        line3.style.transform = "none";
+  // Trap focus inside mobile drawer when open
+  menu?.addEventListener("keydown", (e) => {
+    if (e.key !== "Tab" || btn?.getAttribute("aria-expanded") !== "true") return;
+
+    const focusableElements = menu.querySelectorAll('a, button');
+    if (focusableElements.length === 0) return;
+
+    const firstFocusable = focusableElements[0] as HTMLElement;
+    const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    if (e.shiftKey) { // Shift + Tab
+      if (document.activeElement === firstFocusable) {
+        lastFocusable.focus();
+        e.preventDefault();
       }
-    });
+    } else { // Tab
+      if (document.activeElement === lastFocusable) {
+        firstFocusable.focus();
+        e.preventDefault();
+      }
+    }
   });
 </script>

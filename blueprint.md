@@ -17,10 +17,12 @@ This project is a static website for a cleaning company ("Éclat du Sud"), built
 - `tailwind.config.mjs`: Tailwind design tokens.
 - `src/styles/global.css`: Global styles.
 
-## Current Plan: Rename Brand to "Éclat du Sud" & Add Google Analytics
-We will update all site references from "Éclat de Sud" to "Éclat du Sud" (and social/domain handles depending on confirmation) and add Google Analytics to the head section of the site's layout.
+## Current Plan: Redesign Mobile Navigation
+We will redesign the mobile navigation menu in `src/components/Navbar.astro` to provide a premium, modern, drawer-style interface with a blurred backdrop, scroll locking, and enriched brand contact details, while strictly respecting accessibility (A11Y) best practices.
 
 ### Actionable Steps
-1. **Update layout, components, and pages**: Replace brand text "Éclat de Sud" and "ÉCLAT DE SUD" with "Éclat du Sud" and "ÉCLAT DU SUD".
-2. **Add Google Analytics**: Insert the analytics tags into `Layout.astro`.
-3. **Verify Integration**: Inspect the browser rendering to verify changes.
+1. **Prepare the Layout & Styling**: Update `Navbar.astro`'s structure to use a slide-out drawer from the right, a custom blurred backdrop overlay, and a premium navy + gold look.
+2. **Enrich Drawer Content**: Add navigation links, contact details (phone, sectors, hours), and clear call-to-actions inside the drawer.
+3. **Refactor Hamburger Toggle**: Build CSS-driven transitions for the hamburger lines.
+4. **Implement JavaScript Behavior**: Manage open/close classes, prevent background body scroll, close on link or backdrop clicks, and handle Escape keys and keyboard trapping/focus.
+5. **Verify Navigation**: Manually inspect responsiveness, transitions, close behavior, and ensure zero runtime errors.
