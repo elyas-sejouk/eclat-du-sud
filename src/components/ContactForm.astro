@@ -320,7 +320,7 @@ import { services } from "../data/services.js";
   function handleServiceChange() {
     const selectedService = (serviceSelector as HTMLSelectElement).value;
 
-    const movingKeywords = ["Débarras", "Déménagement"];
+    const movingKeywords = ["Débarras"];
     const isMoving = movingKeywords.some((keyword) =>
       selectedService.includes(keyword),
     );

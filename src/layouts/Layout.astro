@@ -10,6 +10,8 @@ import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 
+import CookieBanner from "../components/CookieBanner.astro";
+
 interface Props {
 	title?: string;
 }
@@ -25,26 +27,17 @@ const displayTitle = title ? `${title} | ${defaultSiteTitle}` : defaultSiteTitle
 		<meta charset="UTF-8" />
 		<meta
 			name="description"
-			content="Nettoyage professionnel Airbnb, Fin de Chantier & Événementiel à Narbonne et environs. Devis gratuit sous 24h."
+			content="Nettoyage professionnel Fin de Chantier, Événementiel, Débarras & Post-Tempête à Narbonne et environs. Devis gratuit sous 24h."
 		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/ico.png" />
 		<meta name="generator" content={Astro.generator} />
-
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DVLQKWGKSB"></script>
-		<script is:inline>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'G-DVLQKWGKSB');
-		</script>
 
 		<title>{displayTitle}</title>
 	</head>
 
 	<body class="bg-brand-gray-light text-brand-text font-sans antialiased">
 		<slot />
+		<CookieBanner />
 	</body>
 </html>

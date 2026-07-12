@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Politique de Confidentialité">
+  <Navbar />
+
+  <main class="bg-brand-gray-light min-h-screen py-20">
+    <div class="bg-white border border-brand-gray-border/60 p-8 md:p-12 rounded-3xl shadow-sm max-w-4xl mx-auto">
+
+      <h1 class="font-heading font-bold text-3xl md:text-4xl text-brand-navy mb-8 border-b border-brand-gray-border pb-4">Politique de Confidentialité</h1>
+
+      <div class="space-y-8 text-base text-brand-text font-medium leading-relaxed">
+        <section>
+          <h2 class="font-heading font-bold text-lg text-brand-navy mb-2">1. Responsable du traitement</h2>
+          <p class="text-slate-600">
+            Les données personnelles collectées sur le site <strong>Éclat du Sud</strong> sont traitées par l'éditeur du site (SIRET : 952 589 646 00019).<br>
+            Contact : <a href="mailto:eclatdusud@gmail.com" class="text-brand-gold hover:underline">eclatdusud@gmail.com</a>
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-lg text-brand-navy mb-2">2. Données collectées</h2>
+          <p class="text-slate-600 mb-2">
+            Nous collectons uniquement les données que vous nous transmettez volontairement via notre formulaire de demande de devis :
+          </p>
+          <ul class="list-disc list-inside text-slate-600 space-y-1">
+            <li>Nom complet</li>
+            <li>Adresse email</li>
+            <li>Numéro de téléphone</li>
+            <li>Ville d'intervention</li>
+            <li>Détails de votre demande (type de prestation, surface, précisions)</li>
+          </ul>
+          <p class="text-slate-600 mt-2">
+            Avec votre consentement, des données de navigation anonymisées sont également collectées à des fins de mesure d'audience (voir section Cookies).
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-lg text-brand-navy mb-2">3. Finalités et bases légales</h2>
+          <p class="text-slate-600">
+            Vos données de contact sont utilisées exclusivement pour répondre à votre demande de devis et assurer le suivi de la relation commerciale (base légale : mesures précontractuelles).
+            Les données de mesure d'audience sont utilisées pour améliorer le site (base légale : votre consentement).
+            Vos données ne sont jamais vendues ni cédées à des tiers à des fins commerciales.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-lg text-brand-navy mb-2">4. Destinataires et sous-traitants</h2>
+          <p class="text-slate-600">
+            Le formulaire de contact est traité par <strong>Formspree</strong> (Formspree Inc., États-Unis), qui achemine votre demande vers notre boîte email.
+            La mesure d'audience est assurée par <strong>Google Analytics</strong> (Google Ireland Ltd.), uniquement si vous l'acceptez.
+            Ces prestataires peuvent impliquer un transfert de données hors de l'Union Européenne, encadré par des clauses contractuelles types.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-lg text-brand-navy mb-2">5. Durée de conservation</h2>
+          <p class="text-slate-600">
+            Les données liées aux demandes de devis sont conservées au maximum 3 ans après le dernier contact.
+            Les données de mesure d'audience sont conservées au maximum 14 mois.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-lg text-brand-navy mb-2">6. Cookies</h2>
+          <p class="text-slate-600">
+            Lors de votre première visite, une bannière vous permet d'accepter ou de refuser les cookies de mesure d'audience (Google Analytics).
+            Aucun cookie de mesure d'audience n'est déposé sans votre consentement. Votre choix est conservé 6 mois, après quoi la bannière vous sera présentée à nouveau.
+            Vous pouvez modifier votre choix à tout moment via le lien « Gérer les cookies » en bas de page.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading font-bold text-lg text-brand-navy mb-2">7. Vos droits</h2>
+          <p class="text-slate-600">
+            Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition, de limitation du traitement et de portabilité de vos données.
+            Pour exercer ces droits, contactez-nous à <a href="mailto:eclatdusud@gmail.com" class="text-brand-gold hover:underline">eclatdusud@gmail.com</a>.
+            Vous pouvez également introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:underline">www.cnil.fr</a>).
+          </p>
+        </section>
+
+        <div class="mt-12 pt-8 border-t border-brand-gray-border">
+          <a href="/" class="font-bold text-brand-gold hover:text-brand-gold-light transition-colors">← Retour à l'accueil</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
