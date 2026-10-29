@@ -14,6 +14,20 @@ export const services = [
     imageFile: "nettoyage-fin-de-chantier.jpeg"
   },
   {
+    slug: "locaux-professionnels",
+    title: "Locaux Professionnels & Entreprises",
+    shortDesc: "Entretien régulier ou ponctuel de bureaux, commerces, cabinets et parties communes.",
+    fullDesc: "L'image de votre entreprise passe par la propreté irréprochable de vos locaux. Nous accompagnons les professionnels, commerces, cabinets médicaux et syndics de copropriété avec des prestations sur-mesure, en intervention ponctuelle ou sous contrat d'entretien régulier.",
+    features: [
+      "Entretien des bureaux, postes de travail et espaces d'accueil",
+      "Nettoyage des vitrines, baies vitrées et sols commerciaux",
+      "Désinfection des sanitaires, salles de pause et points de contact",
+      "Horaires décalés possibles (tôt le matin ou en soirée) sans perturber votre activité"
+    ],
+    price: "Sur devis ou contrat d'entretien",
+    imageFile: "nettoyage-locaux-professionnels.webp"
+  },
+  {
     slug: "evenementiel",
     title: "Événementiel",
     shortDesc: "Avant ou après la fête, on gère le chaos.",
@@ -57,16 +71,16 @@ export const services = [
   },
   {
     slug: "textiles-canapes",
-    title: "Textiles & Canapés",
-    shortDesc: "Ravivez vos moquettes, tapis et tissus d'ameublement en éliminant les taches incrustées en profondeur.",
-    fullDesc: "Vos moquettes, canapés et autres textiles accumulent la poussière, les allergènes et les taches. Notre équipe intervient avec du matériel professionnel d'injection-extraction pour assainir vos tissus d'ameublement en profondeur, en gérant aussi bien l'entretien régulier que la remise à neuf.",
+    title: "Moquettes, Tapis & Textiles",
+    shortDesc: "Shampouinage et remise à neuf de vos moquettes (bureaux, hôtels, particuliers), tapis et canapés.",
+    fullDesc: "Les moquettes d'entreprise, d'hôtellerie ou d'habitation ainsi que les tapis et canapés retiennent la poussière, les allergènes et les taches de passage intensif. Notre équipe intervient par injection-extraction et shampouinage mécanique pour décaper, détacher et assainir vos sols textiles en profondeur, des grands plateaux de bureaux aux salons particuliers.",
     features: [
-      "Aspiration en profondeur des poussières et allergènes",
-      "Traitement ciblé et détachage des traces rebelles",
-      "Shampouinage et nettoyage par injection-extraction",
-      "Option : Désinfection complète et traitement anti-acariens"
+      "Nettoyage et shampouinage de moquettes (bureaux, hôtels, commerces et particuliers)",
+      "Injection-extraction haute performance des tapis, fauteuils et canapés",
+      "Détachage intensif des zones de fort passage et traces rebelles",
+      "Option : Désinfection complète, désodorisation et traitement anti-acariens"
     ],
-    price: "Sur devis (selon surface / type)",
+    price: "Sur devis (selon m² / surface)",
     imageFile: "nettoyage-moket.webp"
   }
 ];

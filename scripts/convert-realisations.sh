@@ -70,6 +70,17 @@ PHOTOS=(
   "alignan-du-vent-2026-07-09|Fin de Chantier/Sol après la remontée de la laitance .HEIC|couloir-apres"
   "alignan-du-vent-2026-07-09|Fin de Chantier/vitre - Anti calcaire .HEIC|vitre-avant"
   "alignan-du-vent-2026-07-09|Fin de Chantier/Vitre avant .HEIC|vitre-apres"
+
+  # --- R5 Moussan, 17 oct. 2026 — fin de chantier ---------------------------
+  "moussan-2026-10-17|Maison moussan/IMG_5568.HEIC|sejour-marbre-apres"
+  "moussan-2026-10-17|Maison moussan/IMG_5550.HEIC|rail-baie-avant"
+  "moussan-2026-10-17|Maison moussan/IMG_5555.HEIC|rail-baie-apres"
+  "moussan-2026-10-17|Maison moussan/IMG_5561.JPG|monobrosse-materiel"
+  "moussan-2026-10-17|Maison moussan/IMG_5567.HEIC|sejour-escalier-apres"
+  "moussan-2026-10-17|Maison moussan/IMG_5549.HEIC|charpente-plafond-apres"
+  "moussan-2026-10-17|Maison moussan/IMG_5569.HEIC|sol-gres-gris-apres"
+  "moussan-2026-10-17|Maison moussan/IMG_5573.HEIC|plinthes-finition-apres"
+  "moussan-2026-10-17|Maison moussan/IMG_5543.HEIC|sol-projections-avant"
 )
 
 # Videos are portrait HEVC/MOV. Transcoded to H.264 MP4 with the audio track

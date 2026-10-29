@@ -4,9 +4,9 @@ import { published, communes, photo } from "../data/published-realisations.ts";
 
 // Three strongest frames, chosen deliberately — see docs/adr/0004.
 const highlights = [
-  { slug: "coursan-2025-10-27", file: "parquet-apres", label: "Parquet ancien, Coursan" },
+  { slug: "moussan-2026-10-17", file: "sejour-marbre-apres", label: "Fin de chantier, Moussan" },
   { slug: "alignan-du-vent-2026-07-09", file: "sejour-autolaveuse", label: "Fin de chantier, Alignan-du-Vent" },
-  { slug: "ginestas-2025-10-28", file: "fenetre-apres", label: "Vitrages, Ginestas" },
+  { slug: "coursan-2025-10-27", file: "parquet-apres", label: "Parquet ancien, Coursan" },
 ]
   .map((h) => ({ ...h, img: photo(h.slug, h.file) }))
   .filter((h) => h.img);

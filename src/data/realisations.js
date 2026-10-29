@@ -12,10 +12,73 @@
 // in one sweep at the end of the job, the span measures the photography rather
 // than the job, and the field is omitted rather than guessed.
 //
-// Only curated frames appear here — 23 of 42. The omissions are deliberate;
+// Only curated frames appear here — 32 of 72. The omissions are deliberate;
 // read docs/adr/0004 before adding to this file.
 
 export const realisations = [
+  {
+    slug: "moussan-2026-10-17",
+    commune: "Moussan",
+    dept: "Aude (11)",
+    date: "2026-10-17",
+    dateLabel: "Octobre 2026",
+    prestations: [{ label: "Fin de chantier", slug: "fin-de-chantier" }],
+    duration: "5 h 12 sur site",
+    summary:
+      "Maison rénovée à Moussan : décapage à la monobrosse des sols en grès cérame poli effet marbre et grès mat, retrait des projections de plâtre et de peinture, dépoussiérage de la charpente apparente et remise à neuf des rails de baies vitrées.",
+    media: [
+      {
+        type: "single",
+        file: "sejour-marbre-apres",
+        feature: true,
+        caption:
+          "Séjour et cuisine livrés : grès cérame poli effet marbre décapé sans trace, façades et plinthes dépoussiérées.",
+      },
+      {
+        type: "pair",
+        avant: "rail-baie-avant",
+        apres: "rail-baie-apres",
+        caption:
+          "Rails de baie vitrée obstrués par la terre et les aiguilles de pin — aspirés, brossés et décrassés à cœur.",
+      },
+      {
+        type: "single",
+        file: "monobrosse-materiel",
+        caption:
+          "Matériel déployé sur site : monobrosse et aspirateur industriel eau et poussière pour traiter les sols en profondeur.",
+      },
+      {
+        type: "single",
+        file: "sejour-escalier-apres",
+        caption:
+          "Vue d'ensemble du séjour au pied de l'escalier après élimination du voile de laitance et des résidus de chantier.",
+      },
+      {
+        type: "single",
+        file: "charpente-plafond-apres",
+        caption:
+          "Poutres apparentes, plafonds et luminaires dépoussiérés avant remise des clés.",
+      },
+      {
+        type: "single",
+        file: "sol-gres-gris-apres",
+        caption:
+          "Seconde pièce après passage de la monobrosse : carrelage grand format assaini et uniforme.",
+      },
+      {
+        type: "single",
+        file: "plinthes-finition-apres",
+        caption:
+          "Jonctions sols et murs reprises dans le détail, débarrassées des gouttes de peinture.",
+      },
+      {
+        type: "single",
+        file: "sol-projections-avant",
+        caption:
+          "État initial du carrelage avant notre intervention : projections de plâtre, taches de peinture et poussière de ponçage.",
+      },
+    ],
+  },
   {
     slug: "alignan-du-vent-2026-07-09",
     commune: "Alignan-du-Vent",
